@@ -22,5 +22,9 @@ public class Move : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, destination[point].position, speed * Time.deltaTime);
     }
 
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.GetChild(0).position, 1f);
+    }
 }
