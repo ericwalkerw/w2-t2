@@ -11,6 +11,7 @@ public class Move : MonoBehaviour
         if (Vector3.Distance(transform.position, destination[point].position) < 0.1f)
         {
             point = Random.Range(0, destination.Length);
+            transform.LookAt(destination[point]);
         }
 
         MoveToPoint();
